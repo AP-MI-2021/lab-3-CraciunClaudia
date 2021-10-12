@@ -63,41 +63,31 @@ def is_prime_digits(n):
     :param n: Numarul dat
     :return: True daca toate cifrele sunt prime sau False daca nu sunt toate prime
     '''
-    if n == 0 or n == 1 :
-        return False
 
     while(n):
-        if n % 10 == 1:
+        if n % 10 == 1 :
             return False
-        if n % 10 == 0:
+        if n % 10 == 0 :
             return False
-        if n % 10 == 4:
+        if n % 10 == 4 :
             return False
-        if n % 10 == 6:
+
+        if n % 10 == 6 :
             return False
-        if n %10 == 8:
+        if n % 10 == 8 :
             return False
-        if n % 10 == 9:
+        if  n % 10 ==9 :
             return False
-        n = n /10
+        n = n / 10
+
     return True
 
-
-
-
-
-def get_prime_digits(lst):
-    '''
-    Determina daca toate numerele din lista au cifrele prime
-    :param lst: Lista de numere
-    :return: O lista cu numere care au cifrele prime
-    '''
+def get_digits(lst):
     result = []
-    for num in lst :
+    for num in lst:
         if is_prime_digits(num):
             result.append(num)
     return result
-
 def test_is_prime_digits():
     assert is_prime_digits(172) == False
     assert is_prime_digits(272) == True
@@ -116,12 +106,12 @@ def get_longest_prime_digits(lst: List[int]) -> List[int]:
         for dr in range (st , nr):
             all_prime_digits = True
             for num in lst [st:dr+1]:
-                if not is_prime_digits(num):
+                if  is_prime_digits(num) == False :
                     all_prime_digits = False
                     break
-                if is_prime_digits(num):
-                    if dr - st +1 > len(result):
-                        result = lst[st:dr +1]
+                if is_prime_digits(num) == True:
+                    if dr - st + 1 > len(result):
+                        result = lst[st:dr + 1]
     return result
 
 
