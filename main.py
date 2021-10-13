@@ -26,7 +26,7 @@ def test_is_even():
     assert is_even(10) == True
     assert is_even (9) == False
 
-def get_even(lst):
+def get_even(lst: list[int]) -> List[int]:
     '''
     Determina daca toate numerele sunt pare
     :param lst: Lista de numere
@@ -73,7 +73,7 @@ def is_nr_div(n):
 
 
 
-def get_nr_div(lst):
+def get_nr_div(lst: list[int]) -> List[int]:
     result = []
     for num in lst:
         if is_nr_div(num):
@@ -131,7 +131,7 @@ def is_palindrome(n):
         return True
     elif x != ogl:
         return False
-def get_palindrome(lst):
+def get_palindrome(lst: list[int]) -> List[int]:
     result = []
     for num in lst:
         if is_palindrome(num):
