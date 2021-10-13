@@ -74,6 +74,11 @@ def is_nr_div(n):
 
 
 def get_nr_div(lst: list[int]) -> List[int]:
+    '''
+    Determina daca toate numerele au acelasi numar de divizori
+    :param lst: O lista cu numere
+    :return: O lista cu numerele care au acelasi numar de divizori
+    '''
     result = []
     for num in lst:
         if is_nr_div(num):
@@ -81,6 +86,11 @@ def get_nr_div(lst: list[int]) -> List[int]:
     return result
 
 def get_longest_same_div_count(lst: list[int]) -> List[int]:
+    '''
+    Determina cea mai lunga subsecventa in care numerele au acelasi numar de divizori
+    :param lst: Lista in care se cauta subsecventa
+    :return: Subsecventa gasita
+    '''
     nr = len(lst)
     result = []
 
@@ -132,6 +142,11 @@ def is_palindrome(n):
     elif x != ogl:
         return False
 def get_palindrome(lst: list[int]) -> List[int]:
+    '''
+    Determina numerele care sunt palindroame din lista
+    :param lst: O lista de numere
+    :return: O lista cu numere palindrome
+    '''
     result = []
     for num in lst:
         if is_palindrome(num):
@@ -139,6 +154,11 @@ def get_palindrome(lst: list[int]) -> List[int]:
     return result
 
 def get_longest_all_palindromes(lst: list[int]) -> List[int]:
+    '''
+    Determina cea mai lunga subsecventa in care numerele sunt palindroame
+    :param lst: Lista in care se cauta subsecventa
+    :return: Subsecventa gasita
+    '''
     nr = len(lst)
     result = []
     for st in range(nr):
